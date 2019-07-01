@@ -4,7 +4,7 @@
 ## END INIT INFO
 
 apache_pid() {
-echo `ps aux | grep apache | grep -v grep | awk '{ print $2 }'
+echo `ps aux | grep apache | grep -v grep | awk '{ print $2 }'`
 }
 
 info() {
