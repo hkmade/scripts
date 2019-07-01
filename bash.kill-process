@@ -1,1 +1,23 @@
-sss
+#!/bin/bash
+#
+# apache This shell script stopping Apache Process manaually
+## END INIT INFO
+
+apache_pid() {
+echo `ps aux | grep apache | grep -v grep | awk '{ print $2 }'
+}
+
+info() {
+pid=$(apache_pid)
+echo $pid
+return 0
+}
+
+case "$1" in
+ info)
+ info
+ ;;
+ esac
+ 
+ exit 0
+ 
